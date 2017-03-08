@@ -1,9 +1,12 @@
 # setTimeout
 setTimeout第三个参数
 setTimeout可以传入第三个参数、第四个参数….，它们表示神马呢？其实是用来表示第一个参数（回调函数）传入的参数。
-setTimeout(function(a, b){   
+setTimeout(function(a, b){ 
+
   console.log(a);   // 3
+  
   console.log(b);   // 4
+  
 },0, 3, 4)
 
 变异的一：

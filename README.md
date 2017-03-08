@@ -11,6 +11,7 @@ setTimeout(function(a, b){
 },0, 3, 4)
 
 变异的一：
+
 for (var i = 1; i < 4; i++) {
 
         var t = setTimeout(function(i) {
@@ -24,6 +25,7 @@ for (var i = 1; i < 4; i++) {
         }, 10, i);
         
     }
+		
     因为t定义在闭包外面，所以这里的t指的是最后一个循环留下来的t，所以最后一个3被清除了，没有输出。
     在没有clearTimeout的情况下i=1,t=3;i=2,t=3;i=3,t=3
     在有clearTimeout的情况下会清除最后一次循环
@@ -42,6 +44,7 @@ for (var i = 1; i < 4; i++) {
             
         }, 10, 2, 3);  
     }
+		
    此时的t定义在闭包里，循环两次结果都是传入的值
    
     for (var i = 1; i < 4; i++) {
